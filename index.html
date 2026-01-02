@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>🚜 Мини Багер Костинброд, Сливница, Драгоман, София | Изкопи, Транспорт | 0886 346 666</title>
     <meta name="description" content="⚡ Професионални изкопни услуги с мини багер, бус под наем и дробилка за клони. Обслужваме: Костинброд, Сливница, Драгоман, Годеч, Искрец, Мрамор, София и цялата област. Бърза оферта ☎️ 0886 346 666">
     <meta name="keywords" content="мини багер Костинброд, изкопи Сливница, багер Драгоман, транспорт София, дробилка за клони Годеч, бус под наем Искрец, изкопни услуги Мрамор, багер София област, изкопи Белидие хан, транспорт Богьовци">
-
     <link rel="canonical" href="https://minibagerkostinbrod.pages.dev/">
 
     <!-- Preconnect -->
@@ -18,18 +16,25 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/bus1.png">
     <link rel="apple-touch-icon" href="/images/bus1.jpg">
 
-    <!-- Open Graph & Twitter -->
+    <!-- Open Graph – перфектно споделяне в Facebook, Messenger и др. -->
     <meta property="og:title" content="Мини Багер Костинброд, Сливница, Драгоман | 0886 346 666">
-    <meta property="og:description" content="Изкопни услуги с мини багер, транспорт и дробилка за клони в Костинброд, Сливница, Драгоман, София и региона.">
+    <meta property="og:description" content="Професионални изкопни услуги с мини багер, транспорт с бус и дробилка за клони в Костинброд, Сливница, Драгоман, София и региона. Бърза оферта ☎️ 0886 346 666">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://minibagerkostinbrod.pages.dev/">
     <meta property="og:locale" content="bg_BG">
-    <meta property="og:image" content="https://minibagerkostinbrod.pages.dev/images/bag1.jpg">
+    <meta property="og:site_name" content="Мини Багер Костинброд">
+    <meta property="og:image" content="https://minibagerkostinbrod.pages.dev/images/bagbus.jpg">
+    <meta property="og:image:secure_url" content="https://minibagerkostinbrod.pages.dev/images/bagbus.jpg">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Мини багер и бус за изкопни и транспортни услуги в Костинброд">
+
+    <!-- Twitter / Messenger -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Мини Багер - Костинброд, Сливница, Драгоман, София">
     <meta name="twitter:description" content="Професионални изкопни услуги в цяла София-област">
+    <meta name="twitter:image" content="https://minibagerkostinbrod.pages.dev/images/bagbus.jpg">
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="BG-22">
@@ -151,7 +156,7 @@
     }
     </script>
 
-    <!-- BreadcrumbList, FAQPage, ItemList Schema – остават същите, но с актуализиран url -->
+    <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -165,6 +170,7 @@
     }
     </script>
 
+    <!-- FAQPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -212,7 +218,6 @@
             background: var(--light);
             overflow-x: hidden;
         }
-
         header {
             position: fixed;
             top: 0;
@@ -244,7 +249,6 @@
         }
         .logo::before { content: "🚜"; font-size: 1.3em; animation: bounce 2s infinite; }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
-
         .phone-header a {
             background: var(--gradient);
             color: var(--dark);
@@ -257,7 +261,6 @@
             transition: all 0.3s;
         }
         .phone-header a:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(255,153,0,0.6); }
-
         .hero {
             margin-top: 70px;
             min-height: 85vh;
@@ -295,7 +298,6 @@
             transition: all 0.3s;
         }
         .cta-primary:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 12px 40px rgba(255,153,0,0.6); }
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -330,7 +332,6 @@
             max-width: 700px;
             margin: 20px auto 0;
         }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -374,7 +375,6 @@
             font-weight: 900;
             font-size: 1.2em;
         }
-
         .areas-section { background: var(--gray); }
         .areas-grid {
             display: grid;
@@ -397,7 +397,6 @@
             box-shadow: 0 8px 30px rgba(255,153,0,0.2);
         }
         .area-card::before { content: "📍"; font-size: 2.5em; display: block; margin-bottom: 10px; }
-
         .advantages-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -417,7 +416,6 @@
             text-align: center;
         }
         .advantages-list li:hover { transform: scale(1.05); }
-
         .social-links {
             display: flex;
             gap: 20px;
@@ -440,7 +438,6 @@
         .social-btn.facebook { background: #1877F2; color: white; }
         .social-btn.google-maps { background: #4285F4; color: white; }
         .social-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
-
         .contact-section {
             background: linear-gradient(135deg, var(--dark) 0%, #1a1f3a 100%);
             color: var(--light);
@@ -462,7 +459,6 @@
             transition: all 0.3s;
         }
         .phone-large:hover { color: #FFB84D; transform: scale(1.05); }
-
         .contact-form {
             background: rgba(255,255,255,0.05);
             padding: 35px;
@@ -501,7 +497,6 @@
             transition: all 0.3s;
         }
         .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255,153,0,0.5); }
-
         footer {
             background: #050812;
             color: var(--light);
@@ -522,7 +517,6 @@
             transition: all 0.3s;
         }
         .footer-links a:hover { color: #FFB84D; }
-
         @media (max-width: 768px) {
             .header-content { flex-direction: column; gap: 15px; padding: 12px 20px; }
             .hero { margin-top: 120px; min-height: 70vh; }
@@ -531,7 +525,6 @@
             .social-links { flex-direction: column; align-items: stretch; }
             .social-btn { justify-content: center; }
         }
-
         .skip-link {
             position: absolute;
             top: -40px;
@@ -554,7 +547,6 @@
             </nav>
         </div>
     </header>
-
     <main id="main-content">
         <section class="hero" id="hero" aria-labelledby="hero-title">
             <div class="hero-content">
@@ -697,7 +689,7 @@
                         </div>
                     </div>
                 </div>
-               
+              
             </div>
         </section>
     </main>
@@ -725,7 +717,7 @@
             </p>
             <hr style="margin: 30px 0; border: none; border-top: 1px solid rgba(255,255,255,0.1);">
             <p>&copy; 2026 Мини Багер Костинброд. Всички права запазени.</p>
-            
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.7;">Уебсайт оптимизиран за SEO, скорост и AI търсачки</p>
         </div>
     </footer>
 
@@ -736,7 +728,6 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-
         window.addEventListener('scroll', () => {
             document.querySelector('header').classList.toggle('scrolled', window.scrollY > 100);
         });
