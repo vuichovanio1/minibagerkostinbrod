@@ -423,6 +423,7 @@
             margin: 40px 0;
             flex-wrap: wrap;
         }
+        .social-links-start { justify-content: flex-start; }
         .social-btn {
             display: inline-flex;
             align-items: center;
@@ -442,6 +443,8 @@
             background: linear-gradient(135deg, var(--dark) 0%, #1a1f3a 100%);
             color: var(--light);
         }
+        .contact-section .section-header h2 { color: var(--primary); }
+        .contact-section .section-header p { color: rgba(255,255,255,0.9); }
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -449,6 +452,8 @@
             margin-top: 40px;
         }
         .contact-info h3 { font-size: 2em; color: var(--primary); margin-bottom: 20px; }
+        .contact-follow { margin-top: 30px; }
+        .contact-follow-title { margin-bottom: 15px; }
         .phone-large {
             font-size: 2.5em;
             color: var(--primary);
@@ -502,6 +507,52 @@
             color: var(--light);
             padding: 50px 0 30px;
             text-align: center;
+        }
+        .footer-title {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .footer-lead {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .footer-box {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+        .footer-phone {
+            font-size: 1.1em;
+        }
+        .footer-phone a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .footer-services {
+            margin-top: 20px;
+            font-size: 0.95em;
+            opacity: 0.8;
+        }
+        .footer-divider {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-credits {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 0.5rem;
+        }
+        .footer-credits a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: normal;
+        }
+        .footer-note {
+            font-size: 0.9em;
+            margin-top: 10px;
+            opacity: 0.7;
         }
         .footer-links {
             display: flex;
@@ -624,20 +675,62 @@
                     <p>Бързи изкопни, транспортни услуги и дробилка за клони във всички градове и села</p>
                 </div>
                 <div class="areas-grid">
-                    <div class="area-card"><h3>Костинброд</h3><p>Базирани сме в Костинброд - най-бърза услуга</p></div>
-                    <div class="area-card"><h3>Сливница</h3><p>Мини багер и транспорт за Сливница</p></div>
-                    <div class="area-card"><h3>Драгоман</h3><p>Изкопни услуги в Драгоман и околните села</p></div>
-                    <div class="area-card"><h3>Годеч</h3><p>Багер и дробилка за Годеч</p></div>
-                    <div class="area-card"><h3>София</h3><p>Обслужваме цяла София и квартали</p></div>
-                    <div class="area-card"><h3>Искрец</h3><p>Транспорт и изкопи в Искрец</p></div>
-                    <div class="area-card"><h3>Мрамор</h3><p>Услуги с мини багер в Мрамор</p></div>
-                    <div class="area-card"><h3>Белидие хан</h3><p>Изкопни работи в Белидие хан</p></div>
-                    <div class="area-card"><h3>Богьовци</h3><p>Мини багер за Богьовци</p></div>
-                    <div class="area-card"><h3>Безден</h3><p>Транспорт и багер в Безден</p></div>
-                    <div class="area-card"><h3>Опицвет</h3><p>Изкопи и дробилка в Опицвет</p></div>
-                    <div class="area-card"><h3>Волуяк</h3><p>Услуги с багер за Волуяк</p></div>
-                    <div class="area-card"><h3>Голяновци</h3><p>Мини багер в Голяновци</p></div>
-                    <div class="area-card"><h3>Доброславци</h3><p>Транспорт и изкопи в Доброславци</p></div>
+                    <div class="area-card">
+                        <h3>Костинброд</h3>
+                        <p>Базирани сме в Костинброд - най-бърза услуга</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Сливница</h3>
+                        <p>Мини багер и транспорт за Сливница</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Драгоман</h3>
+                        <p>Изкопни услуги в Драгоман и околните села</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Годеч</h3>
+                        <p>Багер и дробилка за Годеч</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>София</h3>
+                        <p>Обслужваме цяла София и квартали</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Искрец</h3>
+                        <p>Транспорт и изкопи в Искрец</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Мрамор</h3>
+                        <p>Услуги с мини багер в Мрамор</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Белидие хан</h3>
+                        <p>Изкопни работи в Белидие хан</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Богьовци</h3>
+                        <p>Мини багер за Богьовци</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Безден</h3>
+                        <p>Транспорт и багер в Безден</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Опицвет</h3>
+                        <p>Изкопи и дробилка в Опицвет</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Волуяк</h3>
+                        <p>Услуги с багер за Волуяк</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Голяновци</h3>
+                        <p>Мини багер в Голяновци</p>
+                    </div>
+                    <div class="area-card">
+                        <h3>Доброславци</h3>
+                        <p>Транспорт и изкопи в Доброславци</p>
+                    </div>
                 </div>
 
                 <div class="social-links">
@@ -670,8 +763,8 @@
 
         <section class="contact-section container" id="contact">
             <div class="section-header">
-                <h2 style="color: var(--primary);">Свържете Се с Нас Сега!</h2>
-                <p style="color: rgba(255,255,255,0.9);">Обадете се за бърза оферта или попълнете формата</p>
+                <h2>Свържете Се с Нас Сега!</h2>
+                <p>Обадете се за бърза оферта или попълнете формата</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
@@ -681,9 +774,9 @@
                     <p><strong>📍 Базирани в:</strong> Костинброд, София-област</p>
                     <p><strong>⏰ Работно време:</strong> 07:00 - 20:00 ч. (7 дни в седмицата)</p>
                     <p><strong>📧 Email:</strong> hristo_boichev@abv.bg</p>
-                    <div style="margin-top: 30px;">
-                        <h3 style="margin-bottom: 15px;">🌐 Последвайте ни:</h3>
-                        <div class="social-links" style="justify-content: flex-start;">
+                    <div class="contact-follow">
+                        <h3 class="contact-follow-title">🌐 Последвайте ни:</h3>
+                        <div class="social-links social-links-start">
                             <a href="https://www.facebook.com/profile.php?id=100084683477844" target="_blank" rel="noopener noreferrer" class="social-btn facebook">Facebook</a>
                             <a href="https://maps.app.goo.gl/wBg38JrZH4mW4htx8" target="_blank" rel="noopener noreferrer" class="social-btn google-maps">Google Maps</a>
                         </div>
@@ -696,8 +789,8 @@
 
     <footer role="contentinfo">
         <div class="container footer-content">
-            <h3 style="color: var(--primary); margin-bottom: 20px;">Мини Багер Костинброд</h3>
-            <p style="font-size: 1.1em; margin-bottom: 15px;">Професионални изкопни услуги, транспорт и дробилка за клони</p>
+            <h3 class="footer-title">Мини Багер Костинброд</h3>
+            <p class="footer-lead">Професионални изкопни услуги, транспорт и дробилка за клони</p>
             <div class="footer-links">
                 <a href="#services">Услуги</a>
                 <a href="#areas">Области</a>
@@ -706,18 +799,18 @@
                 <a href="https://www.facebook.com/profile.php?id=100084683477844" target="_blank" rel="noopener">Facebook</a>
                 <a href="https://maps.app.goo.gl/wBg38JrZH4mW4htx8" target="_blank" rel="noopener">Google Maps</a>
             </div>
-            <div style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 10px;">
-                <p style="font-size: 1.1em;"><strong>📞 Телефон:</strong> <a href="tel:+359886346666" style="color: var(--primary);">0886 346 666</a></p>
+            <div class="footer-box">
+                <p class="footer-phone"><strong>📞 Телефон:</strong> <a href="tel:+359886346666">0886 346 666</a></p>
                 <p><strong>📧 Email:</strong> hristo_boichev@abv.bg</p>
             </div>
-            <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.8;">
+            <p class="footer-services">
                 <strong>Обслужваме:</strong> Костинброд, Сливница, Драгоман, Годеч, Искрец, Мрамор,<br>
                 Белидие хан, Богьовци, Безден, Опицвет, Волуяк, Голяновци, Доброславци,<br>
                 София и цялата София-област
             </p>
-            <hr style="margin: 30px 0; border: none; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p style="text-align:center;color:#ffffff;margin-top:.5rem"><a href="https://moverstudio.online" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; font-weight: normal;">© 2026 MOVER Studio — уеб дизайн и разработка. Всички права запазени.</a></p>
-            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.7;">Уебсайт оптимизиран за SEO, скорост и AI търсачки</p>
+            <hr class="footer-divider">
+            <p class="footer-credits"><a href="https://moverstudio.online" target="_blank" rel="noopener">© 2026 MOVER Studio — уеб дизайн и разработка. Всички права запазени.</a></p>
+            <p class="footer-note">Уебсайт оптимизиран за SEO, скорост и AI търсачки</p>
         </div>
     </footer>
 
