@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/bus1.png">
-    <link rel="apple-touch-icon" href="/images/bus1.jpg">
+    <link rel="icon" href="/images/mbmt1-favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/mbmt1-favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/mbmt1-favicon-180.png">
 
     <!-- Open Graph – перфектно споделяне в Facebook, Messenger и др. -->
     <meta property="og:title" content="Мини Багер Костинброд, Сливница, Драгоман | 0886 346 666">
@@ -23,8 +24,8 @@
     <meta property="og:url" content="https://minibagerkostinbrod.pages.dev/">
     <meta property="og:locale" content="bg_BG">
     <meta property="og:site_name" content="Мини Багер Костинброд">
-    <meta property="og:image" content="https://minibagerkostinbrod.pages.dev/images/bagbus.jpg">
-    <meta property="og:image:secure_url" content="https://minibagerkostinbrod.pages.dev/images/bagbus.jpg">
+    <meta property="og:image" content="https://minibagerkostinbrod.pages.dev/images/mbmt1-og-1200x630.jpg">
+    <meta property="og:image:secure_url" content="https://minibagerkostinbrod.pages.dev/images/mbmt1-og-1200x630.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -34,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Мини Багер - Костинброд, Сливница, Драгоман, София">
     <meta name="twitter:description" content="Професионални изкопни услуги в цяла София-област">
-    <meta name="twitter:image" content="https://minibagerkostinbrod.pages.dev/images/bagbus.jpg">
+    <meta name="twitter:image" content="https://minibagerkostinbrod.pages.dev/images/mbmt1-og-1200x630.jpg">
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="BG-22">
@@ -202,12 +203,13 @@
 
     <style>
         :root {
-            --primary: #FF9900;
-            --dark: #0A0E27;
+            --primary: #D89A16;
+            --dark: #070707;
             --light: #FFFFFF;
-            --gray: #F8F9FA;
-            --gradient: linear-gradient(135deg, #FF9900 0%, #FFB84D 100%);
-            --shadow: rgba(10, 14, 39, 0.08);
+            --gray: #111214;
+            --panel: #171717;
+            --gradient: linear-gradient(135deg, #F2B01E 0%, #8C650B 100%);
+            --shadow: rgba(0, 0, 0, 0.22);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -215,7 +217,10 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             color: var(--dark);
             line-height: 1.6;
-            background: var(--light);
+            background:
+                radial-gradient(circle at top left, rgba(242,176,30,0.12), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 26%),
+                linear-gradient(180deg, #0b0b0b 0%, #111111 100%);
             overflow-x: hidden;
         }
         header {
@@ -266,8 +271,8 @@
             min-height: 85vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(10,14,39,0.95), rgba(10,14,39,0.85)),
-                        url('/images/bager1.jpg') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(0,0,0,0.92), rgba(0,0,0,0.78)),
+                        url('/images/mbmt1.jpg') center/cover no-repeat;
             color: var(--light);
             position: relative;
         }
@@ -281,7 +286,7 @@
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 900;
             margin-bottom: 25px;
-            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+            text-shadow: 3px 4px 10px rgba(0,0,0,0.85);
         }
         .hero h1 .highlight { color: var(--primary); display: block; font-size: 1.1em; }
         .hero p { font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 35px; opacity: 0.95; }
@@ -304,13 +309,155 @@
             padding: 80px 25px;
             text-align: center;
         }
+        .campaign-section {
+            position: relative;
+            overflow: hidden;
+            color: var(--light);
+            background:
+                linear-gradient(135deg, rgba(0,0,0,0.96), rgba(18,18,18,0.95)),
+                url('/images/mbmt1.jpg') center/cover no-repeat;
+            border-top: 1px solid rgba(242,176,30,0.28);
+            border-bottom: 1px solid rgba(242,176,30,0.16);
+        }
+        .campaign-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(115deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 38%, rgba(0,0,0,0.78) 100%),
+                repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 16px);
+            pointer-events: none;
+        }
+        .campaign-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+            gap: 35px;
+            align-items: center;
+        }
+        .campaign-copy {
+            text-align: left;
+        }
+        .campaign-kicker {
+            display: inline-block;
+            background: rgba(242,176,30,0.14);
+            color: var(--primary);
+            border: 1px solid rgba(242,176,30,0.35);
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .campaign-title {
+            font-size: clamp(2.1rem, 4.5vw, 4rem);
+            line-height: 0.95;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            max-width: 14ch;
+        }
+        .campaign-title .accent {
+            color: var(--primary);
+            display: block;
+        }
+        .campaign-title .muted {
+            color: #f2f2f2;
+            display: block;
+        }
+        .campaign-copy p {
+            max-width: 700px;
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.92);
+            margin-bottom: 24px;
+        }
+        .campaign-points {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 26px;
+        }
+        .campaign-point {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 16px 18px;
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        }
+        .campaign-point span {
+            display: block;
+            color: var(--primary);
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .campaign-cta-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .campaign-phone {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            padding: 0 24px;
+            border-radius: 999px;
+            background: #f2b01e;
+            color: #111;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-decoration: none;
+            box-shadow: 0 18px 36px rgba(242,176,30,0.25);
+        }
+        .campaign-phone:hover { transform: translateY(-2px); }
+        .campaign-note {
+            align-self: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+        .campaign-art {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+            border: 1px solid rgba(242,176,30,0.22);
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+            overflow: hidden;
+        }
+        .campaign-art img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+        .campaign-art-caption {
+            padding: 16px 18px 18px;
+            background: rgba(0,0,0,0.55);
+            border-top: 1px solid rgba(242,176,30,0.14);
+        }
+        .campaign-art-caption strong {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .campaign-art-caption p {
+            margin-top: 8px;
+            color: rgba(255,255,255,0.86);
+            font-size: 0.98rem;
+        }
         .section-header {
             margin-bottom: 60px;
         }
         .section-header h2 {
             font-size: clamp(2rem, 4vw, 2.8rem);
             font-weight: 900;
-            color: var(--dark);
+            color: var(--light);
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
@@ -328,9 +475,19 @@
         }
         .section-header p {
             font-size: 1.2em;
-            color: #555;
+            color: rgba(255,255,255,0.76);
             max-width: 700px;
             margin: 20px auto 0;
+        }
+        .areas-section .section-header h2,
+        .advantages-section .section-header h2,
+        .services-section .section-header h2 {
+            color: var(--light);
+        }
+        .areas-section .section-header p,
+        .advantages-section .section-header p,
+        .services-section .section-header p {
+            color: rgba(255,255,255,0.76);
         }
         .services-grid {
             display: grid;
@@ -339,12 +496,14 @@
             margin-top: 40px;
         }
         .service-card {
-            background: var(--light);
+            background: linear-gradient(180deg, #1a1a1a, #101010);
+            color: #f5f5f5;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 5px 25px var(--shadow);
             transition: all 0.4s ease;
             text-align: center;
+            border: 1px solid rgba(242,176,30,0.12);
         }
         .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 50px rgba(0,0,0,0.15); }
         .service-card img {
@@ -358,6 +517,8 @@
             padding: 25px;
             text-align: center;
         }
+        .service-content h3,
+        .service-content p { color: inherit; }
         .service-features {
             list-style: none;
             text-align: left;
@@ -383,7 +544,8 @@
             margin-top: 40px;
         }
         .area-card {
-            background: var(--light);
+            background: linear-gradient(180deg, #1a1a1a, #121212);
+            color: #f5f5f5;
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 3px 15px var(--shadow);
@@ -405,15 +567,16 @@
             margin-top: 40px;
         }
         .advantages-list li {
-            background: var(--gradient);
-            color: var(--dark);
+            background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%);
+            color: #f5f5f5;
             padding: 30px;
             border-radius: 15px;
             font-size: 1.2em;
             font-weight: 700;
-            box-shadow: 0 5px 20px rgba(255,153,0,0.3);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
             transition: all 0.3s;
             text-align: center;
+            border: 1px solid rgba(242,176,30,0.14);
         }
         .advantages-list li:hover { transform: scale(1.05); }
         .social-links {
@@ -440,7 +603,7 @@
         .social-btn.google-maps { background: #4285F4; color: white; }
         .social-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
         .contact-section {
-            background: linear-gradient(135deg, var(--dark) 0%, #1a1f3a 100%);
+            background: linear-gradient(135deg, #080808 0%, #171717 100%);
             color: var(--light);
         }
         .contact-section .section-header h2 { color: var(--primary); }
@@ -511,6 +674,8 @@
         .footer-title {
             color: var(--primary);
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
         .footer-lead {
             font-size: 1.1em;
@@ -519,8 +684,9 @@
         .footer-box {
             margin: 30px 0;
             padding: 20px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.04);
             border-radius: 10px;
+            border: 1px solid rgba(242,176,30,0.12);
         }
         .footer-phone {
             font-size: 1.1em;
@@ -573,6 +739,11 @@
             .hero { margin-top: 120px; min-height: 70vh; }
             .container { padding: 50px 20px; }
             .services-grid, .areas-grid { grid-template-columns: 1fr; }
+            .campaign-grid { grid-template-columns: 1fr; }
+            .campaign-copy { text-align: center; }
+            .campaign-title { max-width: none; }
+            .campaign-points { grid-template-columns: 1fr; }
+            .campaign-cta-row { justify-content: center; }
             .social-links { flex-direction: column; align-items: stretch; }
             .social-btn { justify-content: center; }
         }
@@ -607,6 +778,32 @@
             </div>
         </section>
 
+        <section class="campaign-section" id="mbmt-style">
+            <div class="container campaign-grid">
+                <div class="campaign-copy">
+                    <span class="campaign-kicker">Идея от mbmt1</span>
+                    <h2 class="campaign-title">
+                        <span class="accent">Когато мястото е</span>
+                        <span class="muted">трудно, достъпът е ограничен</span>
+                    </h2>
+                    <p>Тук най-силно личи характерът на услугата: мини багерът стига до тесни дворове, неудобни входове и места, където другите не могат. Това е и най-подходящото послание за началото на сайта, защото показва точно какво решаваш за клиента.</p>
+                    <div class="campaign-points">
+                        <div class="campaign-point">Когато мястото е трудно...</div>
+                        <div class="campaign-point">Достъпът е ограничен...</div>
+                        <div class="campaign-point">Там, където другите не могат</div>
+                        <div class="campaign-point">Мини багер под наем и изкопни услуги</div>
+                    </div>
+                    <div class="campaign-cta-row">
+                        <a class="campaign-phone" href="tel:+359886346666">0886 346 666</a>
+                        <div class="campaign-note">Най-силният акцент от изображението остава видим и на сайта.</div>
+                    </div>
+                </div>
+                <div class="campaign-art">
+                    <img src="/images/mbmt1.jpg" alt="Постерен колаж с мини багер и послания: Когато мястото е трудно, достъпът е ограничен, там където другите не могат" loading="lazy" decoding="async" width="1200" height="1200">
+                </div>
+            </div>
+        </section>
+
         <section class="services-section container" id="services">
             <div class="section-header">
                 <h2>Нашите Услуги в Цяла София-област</h2>
@@ -614,7 +811,7 @@
             </div>
             <div class="services-grid">
                 <article class="service-card">
-                    <img src="/images/bagbus.jpg" alt="Мини багер извършва прецизен изкоп за основи в Костинброд и Сливница" loading="lazy" decoding="async" width="400" height="220">
+                    <img src="/images/mbmt2.jpg" alt="Мини багер извършва прецизен изкоп за основи в Костинброд и Сливница" loading="lazy" decoding="async" width="400" height="220">
                     <div class="service-content">
                         <h3>🚜 Изкопни Услуги с Мини Багер</h3>
                         <p>Прецизни изкопи за основи, канализация, септични ями, басейни и планировка на терени.</p>
@@ -627,7 +824,7 @@
                     </div>
                 </article>
                 <article class="service-card">
-                    <img src="/images/drob1.jpg" alt="Мобилна дробилка за клони на място в София-област, Годеч, Искрец" loading="lazy" decoding="async" width="400" height="220">
+                    <img src="/images/mbmt3.png" alt="Мобилна дробилка за клони на място в София-област, Годеч, Искрец" loading="lazy" decoding="async" width="400" height="220">
                     <div class="service-content">
                         <h3>🌳 Дробилка за Клони - Мобилна</h3>
                         <p>Раздробяване на клони и храсти директно на вашия терен.</p>
